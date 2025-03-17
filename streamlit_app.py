@@ -20,7 +20,7 @@ segment_summaries = {
 }
 
 # App configuration
-st.set_page_config(page_title="Persona Portal", layout="centered")
+st.set_page_config(page_title="Persona Portal", layout="centered", page_icon="💬")
 st.title("🧠 Matt's Test Persona Portal")
 st.markdown("""
 Welcome to the Persona Portal! This tool allows you to interact with various investing personas. Select a persona to view their profile and ask them questions to gain insights into different investor perspectives.
