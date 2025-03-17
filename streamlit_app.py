@@ -124,7 +124,6 @@ if st.button("Ask GPT"):
                         f"You're being interviewed as part of a market research study on how Australians engage with investing. "
                         f"Your values include {', '.join(p['values'])}. "
                         f"When responding, stay grounded in real-world investing behavior, preferences, and brands relevant to the financial space in Australia. "
-                        f"Avoid mentioning brands that are not financial services or investment platforms.\n\n"
                         f"You're asked: '{question}'\n\n"
                         f"How would you respond?"
                         )
