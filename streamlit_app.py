@@ -1,13 +1,14 @@
 import streamlit as st
 import json
-import requests
-
-# Get API key from Streamlit secrets
-api_key = st.secrets["OPENAI_API_KEY"]
+import openai
+import os
 
 # Load persona data
 with open("personas.json") as f:
     persona_data = json.load(f)["personas"]
+
+# Load API key from Streamlit secrets
+openai.api_key = st.secrets["OPENAI_API_KEY"]
 
 # Segment summaries based on aggregated traits
 segment_summaries = {
@@ -100,29 +101,35 @@ st.markdown("## 💬 Ask a Question")
 question = st.text_area("Enter your question:", value=st.session_state.get("question_input", ""))
 ask_all = st.checkbox("Ask All Personas")
 
+def generate_response(prompt):
+    response = openai.ChatCompletion.create(
+        model="gpt-4",
+        messages=[{"role": "system", "content": "You are simulating an investor responding in a realistic, conversational tone."},
+                 {"role": "user", "content": prompt}]
+    )
+    return response.choices[0].message.content.strip()
+
 if st.button("Ask GPT"):
     if not question:
         st.warning("Please enter a question.")
     else:
         with st.spinner("Contacting personas..."):
-            payload = {
-                "question": question,
-                "askAll": ask_all
-            }
-            if not ask_all:
-                payload["persona"] = st.session_state.get("selected_persona")
-                payload["segment"] = st.session_state.get("selected_segment")
             try:
-                # 🔁 Update this endpoint if needed for production
-                res = requests.post("http://localhost:5000/test-gpt", json=payload, headers={"Authorization": f"Bearer {api_key}"})
-                res.raise_for_status()
-                response_data = res.json()
                 if ask_all:
-                    for entry in response_data.get("responses", []):
-                        st.markdown(f"**{entry['name']} ({entry['segment']}):**  ")
-                        st.markdown(entry['response'])
+                    for entry in filtered_personas:
+                        p = entry["persona"]
+                        prompt = f"You are {p['name']}, a {p['age']}-year-old {p['occupation']} from {p['location']} who values {', '.join(p['values'])}.\n\nYou are asked: '{question}'\n\nHow would you respond?"
+                        reply = generate_response(prompt)
+                        st.markdown(f"**{p['name']} ({entry['segment']}):**  ")
+                        st.markdown(reply)
                         st.markdown("---")
                 else:
-                    st.markdown(response_data.get("response", "No response received."))
+                    persona = st.session_state.get("selected_persona")
+                    if not persona:
+                        st.warning("Please select a persona.")
+                    else:
+                        prompt = f"You are {persona['name']}, a {persona['age']}-year-old {persona['occupation']} from {persona['location']} who values {', '.join(persona['values'])}.\n\nYou are asked: '{question}'\n\nHow would you respond?"
+                        reply = generate_response(prompt)
+                        st.markdown(reply)
             except Exception as e:
                 st.error(f"Error: {e}")
