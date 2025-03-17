@@ -1,14 +1,14 @@
 import streamlit as st
 import json
-import openai
 import os
+from openai import OpenAI
 
 # Load persona data
 with open("personas.json") as f:
     persona_data = json.load(f)["personas"]
 
 # Load API key from Streamlit secrets
-openai.api_key = st.secrets["OPENAI_API_KEY"]
+client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 
 # Segment summaries based on aggregated traits
 segment_summaries = {
@@ -82,7 +82,6 @@ if "selected_persona" in st.session_state:
         <p><strong>Narrative:</strong> {persona.get("narrative")}</p>
     </div>
     """
-
     st.markdown("---", unsafe_allow_html=True)
     st.markdown(summary_html, unsafe_allow_html=True)
 
@@ -102,12 +101,14 @@ question = st.text_area("Enter your question:", value=st.session_state.get("ques
 ask_all = st.checkbox("Ask All Personas")
 
 def generate_response(prompt):
-    response = openai.ChatCompletion.create(
-        model="gpt-4",
-        messages=[{"role": "system", "content": "You are simulating an investor responding in a realistic, conversational tone."},
-                 {"role": "user", "content": prompt}]
+    completion = client.chat.completions.create(
+        model="gpt-4o",
+        messages=[
+            {"role": "system", "content": "You are simulating an investor responding in a realistic, conversational tone."},
+            {"role": "user", "content": prompt}
+        ]
     )
-    return response.choices[0].message.content.strip()
+    return completion.choices[0].message.content.strip()
 
 if st.button("Ask GPT"):
     if not question:
