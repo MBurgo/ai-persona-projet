@@ -130,7 +130,13 @@ if st.button("Ask GPT"):
                         )
                         reply = generate_response(prompt)
                         st.markdown(f"**{p['name']} ({entry['segment']}):**  ")
-                        st.markdown(reply)
+                        styled_reply = f"""
+                        <div style="background-color:#e3f6d8; padding:20px; border-left:6px solid #43B02A; border-radius:10px; margin-top:10px">
+                                <h4 style="margin-top:0;">{p['name'] if ask_all else persona['name']} says:</h4>
+                                <p style="margin:0;">{reply}</p>
+                        </div>
+                        """
+                        st.markdown(styled_reply, unsafe_allow_html=True)
                         st.markdown("---")
                 else:
                     persona = st.session_state.get("selected_persona")
@@ -139,6 +145,12 @@ if st.button("Ask GPT"):
                     else:
                         prompt = f"You are {persona['name']}, a {persona['age']}-year-old {persona['occupation']} from {persona['location']} who values {', '.join(persona['values'])}.\n\nYou are asked: '{question}'\n\nHow would you respond?"
                         reply = generate_response(prompt)
-                        st.markdown(reply)
+                        styled_reply = f"""
+                        <div style="background-color:#e3f6d8; padding:20px; border-left:6px solid #43B02A; border-radius:10px; margin-top:10px">
+                                <h4 style="margin-top:0;">{p['name'] if ask_all else persona['name']} says:</h4>
+                                <p style="margin:0;">{reply}</p>
+                        </div>
+                        """
+                        st.markdown(styled_reply, unsafe_allow_html=True)
             except Exception as e:
                 st.error(f"Error: {e}")
