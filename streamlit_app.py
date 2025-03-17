@@ -119,15 +119,15 @@ if st.button("Ask GPT"):
                 if ask_all:
                     for entry in filtered_personas:
                         p = entry["persona"]
-prompt = (
-    f"You are {p['name']}, a {p['age']}-year-old {p['occupation']} from {p['location']}. "
-    f"You're being interviewed as part of a market research study on how Australians engage with investing. "
-    f"Your values include {', '.join(p['values'])}. "
-    f"When responding, stay grounded in real-world investing behavior, preferences, and brands relevant to the financial space in Australia. "
-    f"Avoid mentioning brands that are not financial services or investment platforms.\n\n"
-    f"You're asked: '{question}'\n\n"
-    f"How would you respond?"
-)
+                        prompt = (
+                        f"You are {p['name']}, a {p['age']}-year-old {p['occupation']} from {p['location']}. "
+                        f"You're being interviewed as part of a market research study on how Australians engage with investing. "
+                        f"Your values include {', '.join(p['values'])}. "
+                        f"When responding, stay grounded in real-world investing behavior, preferences, and brands relevant to the financial space in Australia. "
+                        f"Avoid mentioning brands that are not financial services or investment platforms.\n\n"
+                        f"You're asked: '{question}'\n\n"
+                        f"How would you respond?"
+                        )
                         reply = generate_response(prompt)
                         st.markdown(f"**{p['name']} ({entry['segment']}):**  ")
                         st.markdown(reply)
