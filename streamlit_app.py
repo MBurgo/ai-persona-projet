@@ -22,6 +22,19 @@ segment_summaries = {
 # App configuration
 st.set_page_config(page_title="Burgo's Persona Portal", layout="centered", page_icon="💬")
 st.title("🧠 Matt's Test Persona Portal")
+
+# --- ℹ️ About This Tool ---
+st.markdown("""
+<div style="background-color:#f0f2f6; padding:20px; border-left:6px solid #485cc7; border-radius:10px; margin-bottom:25px">
+    <h4 style="margin-top:0;">ℹ️ About This Tool</h4>
+    <p>This tool uses AI-generated investor personas — built from real Australian investor research — to simulate how different segments might respond to your ideas.</p>
+    <p>Each persona is built on rich attributes — including goals, values, behaviours, concerns, and communication preferences — informed by real investor research such as the ASX Investor Study, Investment Trends reports, Stake member surveys, and more.</p>
+    <p>GPT-4o is then used to emulate how these personas might realistically think, feel, and respond, based on their individual attributes.</p>
+    <p>The goal? To give marketing and product teams a quick, easy way to test ideas and spark fresh thinking — without needing to run full-scale research.</p>
+    <p>Of course, there are limitations. AI personas obviously aren’t real people. But they’re grounded in data, and designed to (hopefully) help inspire new ideas.</p>
+</div>
+""", unsafe_allow_html=True)
+
 st.markdown("""
 Welcome to the Persona Portal! This tool allows you to interact with various investing personas. Select a persona to view their profile and ask them questions to gain insights into different investor perspectives.
 """)
@@ -120,19 +133,18 @@ if st.button("Ask GPT"):
                     for entry in filtered_personas:
                         p = entry["persona"]
                         prompt = (
-                        f"You are {p['name']}, a {p['age']}-year-old {p['occupation']} from {p['location']}. "
-                        f"You're being interviewed as part of a market research study on how Australians engage with investing. "
-                        f"Your values include {', '.join(p['values'])}. "
-                        f"When responding, stay grounded in real-world investing behavior, preferences, and brands relevant to the financial space in Australia. "
-                        f"You're asked: '{question}'\n\n"
-                        f"How would you respond?"
+                            f"You are {p['name']}, a {p['age']}-year-old {p['occupation']} from {p['location']}. "
+                            f"You're being interviewed as part of a market research study on how Australians engage with investing. "
+                            f"Your values include {', '.join(p['values'])}. "
+                            f"When responding, stay grounded in real-world investing behavior, preferences, and brands relevant to the financial space in Australia. "
+                            f"You're asked: '{question}'\n\n"
+                            f"How would you respond?"
                         )
                         reply = generate_response(prompt)
-                        st.markdown(f"**{p['name']} ({entry['segment']}):**  ")
                         styled_reply = f"""
                         <div style="background-color:#e3f6d8; padding:20px; border-left:6px solid #43B02A; border-radius:10px; margin-top:10px">
-                                <h4 style="margin-top:0;">{p['name'] if ask_all else persona['name']} says:</h4>
-                                <p style="margin:0;">{reply}</p>
+                            <h4 style="margin-top:0;">{p['name']} says:</h4>
+                            <p style="margin:0;">{reply}</p>
                         </div>
                         """
                         st.markdown(styled_reply, unsafe_allow_html=True)
@@ -142,12 +154,15 @@ if st.button("Ask GPT"):
                     if not persona:
                         st.warning("Please select a persona.")
                     else:
-                        prompt = f"You are {persona['name']}, a {persona['age']}-year-old {persona['occupation']} from {persona['location']} who values {', '.join(persona['values'])}.\n\nYou are asked: '{question}'\n\nHow would you respond?"
+                        prompt = (
+                            f"You are {persona['name']}, a {persona['age']}-year-old {persona['occupation']} from {persona['location']} who values {', '.join(persona['values'])}.\n\n"
+                            f"You're asked: '{question}'\n\nHow would you respond?"
+                        )
                         reply = generate_response(prompt)
                         styled_reply = f"""
                         <div style="background-color:#e3f6d8; padding:20px; border-left:6px solid #43B02A; border-radius:10px; margin-top:10px">
-                                <h4 style="margin-top:0;">{p['name'] if ask_all else persona['name']} says:</h4>
-                                <p style="margin:0;">{reply}</p>
+                            <h4 style="margin-top:0;">{persona['name']} says:</h4>
+                            <p style="margin:0;">{reply}</p>
                         </div>
                         """
                         st.markdown(styled_reply, unsafe_allow_html=True)
