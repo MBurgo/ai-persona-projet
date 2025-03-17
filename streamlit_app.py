@@ -2,6 +2,9 @@ import streamlit as st
 import json
 import requests
 
+# Get API key from Streamlit secrets
+api_key = st.secrets["OPENAI_API_KEY"]
+
 # Load persona data
 with open("personas.json") as f:
     persona_data = json.load(f)["personas"]
@@ -110,7 +113,8 @@ if st.button("Ask GPT"):
                 payload["persona"] = st.session_state.get("selected_persona")
                 payload["segment"] = st.session_state.get("selected_segment")
             try:
-                res = requests.post("http://localhost:5000/test-gpt", json=payload)
+                # 🔁 Update this endpoint if needed for production
+                res = requests.post("http://localhost:5000/test-gpt", json=payload, headers={"Authorization": f"Bearer {api_key}"})
                 res.raise_for_status()
                 response_data = res.json()
                 if ask_all:
