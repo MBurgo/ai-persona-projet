@@ -53,7 +53,7 @@
         "image": "https://www.fool.com.au/wp-content/uploads/2024/11/alex_persona.png",
         "suggestions": [
           "What features do you value most in an investment service aimed at young investors?",
-          "What brand first comes to mind when you think of investing?",
+          "What financial services brand first comes to mind when you think of investing?",
           "What could a company like The Motley Fool Australia offer to simplify investment decisions for you?"
         ],
         "behavioral_enrichment": {
@@ -137,7 +137,7 @@
         "suggestions": [
           "What factors make you trust a financial service provider?",
           "How important is ethical investing in your financial decisions?",
-          "What brand first comes to mind when you think of investing?"
+          "What financial services brand first comes to mind when you think of investing?"
         ],
         "behavioral_enrichment": {
           "digital_habits": "Active on Instagram and TikTok, follows lifestyle and budgeting influencers. Joins Facebook groups focused on financial literacy for young adults.",
@@ -224,7 +224,7 @@
         "suggestions": [
           "What tools help you balance risk and reward in your investments?",
           "What resources would help refine your tech investment strategies?",
-          "What brand first comes to mind when you think of investing?"
+          "What financial services brand first comes to mind when you think of investing?"
         ],
         "behavioral_enrichment": {
           "digital_habits": "Reads tech and finance blogs, participates in forums like StackExchange and Reddit's r/investing.",
@@ -304,7 +304,7 @@
         "narrative": "Emily is an engineer passionate about her career and impact. With major life events ahead, she's focused on strengthening her financial position. Overwhelmed by options and jargon, she values sustainability and wants investments to reflect her ethics. She seeks personalised advice and supportive communities.",
         "image": "https://www.fool.com.au/wp-content/uploads/2024/11/emily_persona.png",
         "suggestions": [
-          "What brand first comes to mind when you think of investing?",
+          "What financial services brand first comes to mind when you think of investing?",
           "What challenges do you face with complex investment options?",
           "How could The Motley Fool Australia assist in achieving your financial goals?"
         ],
@@ -391,7 +391,7 @@
         "narrative": "Mark is a dedicated professional and family man focused on ensuring his family's financial well-being. He values stability and takes a measured approach to investing. Proactive in seeking advice, he appreciates services that respect his time and provide clear value. Balancing work, family, and financial planning is a constant challenge.",
         "image": "https://www.fool.com.au/wp-content/uploads/2024/11/mark_persona.png",
         "suggestions": [
-          "What brand first comes to mind when you think of investing?",
+          "What financial services brand first comes to mind when you think of investing?",
           "How do you assess the trustworthiness of financial advice?",
           "How can financial services respect your time while providing valuable investment insights?"
         ],
@@ -472,7 +472,7 @@
         "image": "https://www.fool.com.au/wp-content/uploads/2024/11/sarah_persona.png",
         "suggestions": [
           "What type of expert advice do you find most valuable for optimizing your investment strategies?",
-          "What brand first comes to mind when you think of investing?",
+          "What financial services brand first comes to mind when you think of investing?",
           "How can The Motley Fool Australia support your goal of achieving early retirement?"
         ],
         "behavioral_enrichment": {
@@ -636,7 +636,7 @@
         "suggestions": [
           "How can financial services enhance credibility and trustworthiness in your eyes?",
           "How do you stay proactive in staying informed about financial matters, and how can The Motley Fool Australia support that?",
-          "What brand first comes to mind when you think of investing?"
+          "What financial services brand first comes to mind when you think of investing?"
         ],
         "behavioral_enrichment": {
           "digital_habits": "Engages with online platforms offering detailed analysis. Participates in industry forums.",
@@ -715,7 +715,7 @@
         "narrative": "Robert is enjoying retirement, focusing on family and hobbies. Prefers simple, reliable investments and values his relationship with his advisor. Cautious about protecting wealth to support his lifestyle and family's future.",
         "image": "https://www.fool.com.au/wp-content/uploads/2024/11/robert_persona.png",
         "suggestions": [
-          "What brand first comes to mind when you think of investing?",
+          "What financial services brand first comes to mind when you think of investing?",
           "How can The Motley Fool Australia assist you in protecting your wealth for both your lifestyle and your family's future?",
           "What services provide you with stability and peace of mind in managing your retirement funds?"
         ],
