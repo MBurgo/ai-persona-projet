@@ -43,9 +43,11 @@ st.markdown(
     """
     <div style="background:#f0f2f6;padding:20px;border-left:6px solid #485cc7;border-radius:10px;margin-bottom:25px">
         <h4 style="margin-top:0">ℹ️ About This Tool</h4>
-        <p>This tool uses AI‑generated investor personas — built from real Australian investor research — to simulate how different segments might respond to your ideas.</p>
-        <p>GPT‑4o role‑plays each persona based on their unique goals, values, and behaviours so you can test copy, ideas, or features fast.</p>
-    </div>""",
+    <p>This tool uses AI-generated investor personas — built from real Australian investor research — to simulate how different segments might respond to your ideas.</p>
+    <p>Each persona is built on rich attributes — including goals, values, behaviours, concerns, and communication preferences — informed by real investor research such as the ASX Investor Study, Investment Trends reports, Stake member surveys, and more.</p>
+    <p>GPT-4o is then used to emulate how these personas might realistically think, feel, and respond, based on their individual attributes.</p>
+    <p>The goal? To give marketing and product teams a quick, easy way to test ideas and spark fresh thinking — without needing to run full-scale research.</p>
+    <p>Of course, there are limitations. AI personas obviously aren’t real people. But they’re grounded in data, and designed to (hopefully) help inspire new ideas.</p>    </div>""",
     unsafe_allow_html=True,
 )
 
