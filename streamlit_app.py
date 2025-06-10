@@ -144,7 +144,7 @@ def build_messages(persona_intro: str, history: list[tuple[str, str]], new_q: st
 # Cached LLM call --------------------------------------------------------------
 @st.cache_data(show_spinner=False)
 def _ask_llm(messages: list):
-    reply = client.chat.completions.create(model="gpt-o3", messages=messages)
+    reply = client.chat.completions.create(model="o3", messages=messages)
     return reply.choices[0].message.content.strip()
 
 # Ask‑persona wrapper -----------------------------------------------------------
