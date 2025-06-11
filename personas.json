@@ -20,8 +20,7 @@
           "Creativity",
           "Innovation",
           "Personal freedom",
-          "Environmental and social consciousness",
-          "Ethical investing"
+          "Environmental and social consciousness"
         ],
         "personality_traits": [
           "Tech-savvy",
@@ -117,8 +116,7 @@
         "values": [
           "Sustainability",
           "Social justice",
-          "Community",
-          "Ethical investing"
+          "Community"
         ],
         "personality_traits": [
           "Empathetic",
@@ -135,7 +133,6 @@
             "University clubs",
             "AI stock-analysis apps",
             "Environmental and social activists on social media",
-            "Blogs on sustainable living and ethical finance",
             "University clubs and community groups"
           ],
           "preferred_channels": [
@@ -148,15 +145,13 @@
         "concerns": [
           "Limited disposable income",
           "Lack of confidence in financial knowledge",
-          "Concerned about ethical implications of investments",
           "Feels underserved by traditional financial advice"
         ],
         "decision_making": "Deliberate and research-oriented; values recommendations from trusted communities",
-        "narrative": "Mia is a socially conscious university student eager to make a difference. She would prefer her money supports ethical initiatives. Feeling that traditional institutions don't cater to her values, she seeks platforms offering accessible education and investment options aligned with her beliefs.",
+        "narrative": "Mia is a socially conscious university student eager to make a difference. She would prefer her money supports initiatives. Feeling that traditional institutions don't cater to her values, she seeks platforms offering accessible education and investment options aligned with her beliefs.",
         "image": "https://www.fool.com.au/wp-content/uploads/2024/11/mia_persona.png",
         "suggestions": [
           "What factors make you trust a financial service provider?",
-          "How important is ethical investing in your financial decisions?",
           "What financial services brand first comes to mind when you think of investing?"
         ],
         "behavioral_enrichment": {
@@ -368,7 +363,7 @@
             "changing_careers": "Reassesses goals, increases investment contributions, diversifies portfolio."
           },
           "economic_recovery": "Balances portfolio by increasing growth assets while maintaining stable investments. May invest in property.",
-          "educational_initiatives": "Education helps balance ethical values with growth, increasing confidence in managing a diversified portfolio.",
+          "educational_initiatives": "Education helps balance values with growth, increasing confidence in managing a diversified portfolio.",
           "crisis_management": {
             "personal_emergency": "Relies on budgeting and savings tools. May reduce discretionary spending and reallocate investments to cover immediate needs.",
             "market_crash": "Consults with her financial planner to adjust strategy, shifting towards more stable assets."
@@ -498,12 +493,10 @@
         ],
         "values": [
           "Family",
-          "Personal growth",
-          "Ethical business practices"
+          "Personal growth"
         ],
         "personality_traits": [
           "Motivated",
-          "Ethical",
           "Ambitious",
           "Time-poor but values efficiency"
         ],
