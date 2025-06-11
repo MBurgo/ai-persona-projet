@@ -20,7 +20,6 @@
           "Creativity",
           "Innovation",
           "Personal freedom",
-          "Environmental and social consciousness"
         ],
         "personality_traits": [
           "Tech-savvy",
@@ -67,7 +66,7 @@
           "decision_making_process": "Relies on peer reviews and social proof. Makes impulsive decisions based on trending topics.",
           "financial_behaviour": "Uses micro-investing apps like Raiz and Spaceship. Has a savings account but minimal emergency funds."
         },
-        "risk_tolerance_differences": "Lower than older cohorts; experiments with high\u2011risk assets but only with small stake sizes.",
+        "risk_tolerance_differences": "Lower than older cohorts; experiments with high-risk assets but only with small stake sizes.",
         "scenarios": {
           "market_volatility": "Initially panics and considers selling some investments. After seeking advice on Reddit and watching calming influencers, decides to hold his investments, trusting in long-term growth.",
           "economic_downturn": "Becomes more cautious and starts diversifying his portfolio to include safer assets. Seeks educational resources to understand risk management.",
@@ -114,13 +113,12 @@
           "Building a passive-income safety net before chasing high growth"
         ],
         "values": [
-          "Sustainability",
-          "Social justice",
+          "Future family",
+          "Personal freedom",
           "Community"
         ],
         "personality_traits": [
           "Empathetic",
-          "Socially conscious",
           "Proactive",
           "Seeks authenticity and transparency"
         ],
@@ -132,14 +130,13 @@
             "Podcasts",
             "University clubs",
             "AI stock-analysis apps",
-            "Environmental and social activists on social media",
             "University clubs and community groups"
           ],
           "preferred_channels": [
             "Robo-advice & AI budgeting apps",
             "Mobile apps with user-friendly interfaces",
             "Social media platforms (Instagram, Facebook)",
-            "Podcasts and webinars on sustainability"
+            "Podcasts and webinars"
           ]
         },
         "concerns": [
@@ -148,7 +145,7 @@
           "Feels underserved by traditional financial advice"
         ],
         "decision_making": "Deliberate and research-oriented; values recommendations from trusted communities",
-        "narrative": "Mia is a socially conscious university student eager to make a difference. She would prefer her money supports initiatives. Feeling that traditional institutions don't cater to her values, she seeks platforms offering accessible education and investment options aligned with her beliefs.",
+        "narrative": "Mia is a socially conscious university student eager to make a difference. She would prefer her money supports initiatives, but returns on investment comes first. Feeling that traditional institutions don't cater to her values, she seeks platforms offering accessible education and investment options aligned with her beliefs.",
         "image": "https://www.fool.com.au/wp-content/uploads/2024/11/mia_persona.png",
         "suggestions": [
           "What factors make you trust a financial service provider?",
@@ -308,7 +305,7 @@
         "values": [
           "Professional growth",
           "Innovation",
-          "Sustainability"
+          "Future family"
         ],
         "personality_traits": [
           "Ambitious",
@@ -317,7 +314,7 @@
           "Values authenticity"
         ],
         "behavioural_traits": {
-          "investment_experience": "Moderate; invests in ETFs and sustainable funds",
+          "investment_experience": "Moderate; invests in ETFs and funds",
           "risk_tolerance": "Moderate; balances risk with stable growth and higher family responsibilities",
           "information_sources": [
             "LinkedIn",
@@ -341,7 +338,7 @@
           "Managing student loans alongside investment goals"
         ],
         "decision_making": "Strategic and goal-focused; balances analysis with values",
-        "narrative": "Emily is an engineer passionate about her career and impact. With major life events ahead, she's focused on strengthening her financial position. Overwhelmed by options and jargon, she values sustainability and wants investments to reflect her ethics. She seeks personalised advice and supportive communities.",
+        "narrative": "Emily is an engineer passionate about her career and impact. With major life events ahead, she's focused on strengthening her financial position. Overwhelmed by options and jargon, she seeks personalised advice and supportive communities.",
         "image": "https://www.fool.com.au/wp-content/uploads/2024/11/emily_persona.png",
         "suggestions": [
           "What financial services brand first comes to mind when you think of investing?",
