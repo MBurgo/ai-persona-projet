@@ -1,7 +1,7 @@
 {
   "personas": [
     {
-      "segment": "Next Generation Investors (18–24 years)",
+      "segment": "Next Generation Investors (18\u201324 years)",
       "male": {
         "name": "Alex Johnson",
         "age": 22,
@@ -13,13 +13,15 @@
         "goals": [
           "Achieving financial independence",
           "Saving for travel and life experiences",
-          "Building wealth early to potentially retire young or start a business"
+          "Building wealth early to potentially retire young or start a business",
+          "Building a passive-income safety net before chasing high growth"
         ],
         "values": [
           "Creativity",
           "Innovation",
           "Personal freedom",
-          "Environmental and social consciousness"
+          "Environmental and social consciousness",
+          "Ethical investing"
         ],
         "personality_traits": [
           "Tech-savvy",
@@ -29,14 +31,19 @@
         ],
         "behavioural_traits": {
           "investment_experience": "Beginner investor; experimenting with micro-investing apps",
-          "risk_tolerance": "High; willing to take risks for potential high returns",
+          "risk_tolerance": "Low-to-Moderate; seeks growth but prioritises downside protection",
           "information_sources": [
+            "TikTok",
+            "Reddit",
+            "YouTube",
+            "AI stock-analysis apps",
             "Social media platforms (TikTok, Instagram, YouTube)",
             "Financial influencers",
             "Investment forums (Reddit)",
             "Podcasts and vlogs on personal finance"
           ],
           "preferred_channels": [
+            "Robo-advice & AI budgeting apps",
             "Mobile apps with gamified experiences",
             "Interactive online platforms",
             "Visual content such as videos and infographics"
@@ -61,7 +68,7 @@
           "decision_making_process": "Relies on peer reviews and social proof. Makes impulsive decisions based on trending topics.",
           "financial_behaviour": "Uses micro-investing apps like Raiz and Spaceship. Has a savings account but minimal emergency funds."
         },
-        "risk_tolerance_differences": "Higher risk tolerance; more inclined towards high-risk, high-reward investments like tech startups and cryptocurrencies.",
+        "risk_tolerance_differences": "Lower than older cohorts; experiments with high\u2011risk assets but only with small stake sizes.",
         "scenarios": {
           "market_volatility": "Initially panics and considers selling some investments. After seeking advice on Reddit and watching calming influencers, decides to hold his investments, trusting in long-term growth.",
           "economic_downturn": "Becomes more cautious and starts diversifying his portfolio to include safer assets. Seeks educational resources to understand risk management.",
@@ -82,8 +89,14 @@
           "decision_making": "Follows trending investment opportunities popular in his social circles, seeking validation through social proof."
         },
         "content_consumption": {
-          "preferred_formats": ["Short videos", "Infographics"],
-          "preferred_channels": ["TikTok", "Instagram"],
+          "preferred_formats": [
+            "Short videos",
+            "Infographics"
+          ],
+          "preferred_channels": [
+            "TikTok",
+            "Instagram"
+          ],
           "additional_notes": "Enjoys interactive content like quizzes and challenges."
         }
       },
@@ -98,12 +111,14 @@
         "goals": [
           "Saving for postgraduate studies and future travel",
           "Building a financial safety net",
-          "Contributing to environmental causes"
+          "Contributing to environmental causes",
+          "Building a passive-income safety net before chasing high growth"
         ],
         "values": [
           "Sustainability",
           "Social justice",
-          "Community"
+          "Community",
+          "Ethical investing"
         ],
         "personality_traits": [
           "Empathetic",
@@ -113,13 +128,18 @@
         ],
         "behavioural_traits": {
           "investment_experience": "Beginner; recently started using a micro-investing app",
-          "risk_tolerance": "Low to Moderate; cautious about potential losses",
+          "risk_tolerance": "Low-to-Moderate; seeks growth but prioritises downside protection",
           "information_sources": [
+            "Instagram",
+            "Podcasts",
+            "University clubs",
+            "AI stock-analysis apps",
             "Environmental and social activists on social media",
             "Blogs on sustainable living and ethical finance",
             "University clubs and community groups"
           ],
           "preferred_channels": [
+            "Robo-advice & AI budgeting apps",
             "Mobile apps with user-friendly interfaces",
             "Social media platforms (Instagram, Facebook)",
             "Podcasts and webinars on sustainability"
@@ -144,7 +164,7 @@
           "decision_making_process": "Prefers thorough research before decisions. Values trusted community recommendations.",
           "financial_behaviour": "Uses budgeting apps. Interested in investing but hesitant due to lack of knowledge."
         },
-        "risk_tolerance_differences": "Generally more risk-averse; prefers stable investments with lower volatility.",
+        "risk_tolerance_differences": "Lower than older cohorts; experiments with high\u2011risk assets but only with small stake sizes.",
         "scenarios": {
           "market_volatility": "Feels anxious but refrains from selling. Attends webinars to understand risk mitigation and invests in stable, low-risk options.",
           "economic_downturn": "Reduces high-risk investments, focuses on building an emergency fund, and develops a stable investment strategy with advisors.",
@@ -165,14 +185,21 @@
           "decision_making": "Seeks consensus and reassurance from her network, often discussing investments in Facebook groups."
         },
         "content_consumption": {
-          "preferred_formats": ["Blog articles", "Podcasts", "Webinars"],
-          "preferred_channels": ["Instagram", "YouTube"],
+          "preferred_formats": [
+            "Blog articles",
+            "Podcasts",
+            "Webinars"
+          ],
+          "preferred_channels": [
+            "Instagram",
+            "YouTube"
+          ],
           "additional_notes": "Values community discussions on Facebook groups."
         }
       }
     },
     {
-      "segment": "Emerging Wealth Builders (25–34 years)",
+      "segment": "Emerging Wealth Builders (25\u201334 years)",
       "male": {
         "name": "Liam Anderson",
         "age": 30,
@@ -184,7 +211,8 @@
         "goals": [
           "Saving to start his own tech business",
           "Achieving financial freedom and retiring early",
-          "Interested in high-growth investment opportunities"
+          "Interested in high-growth investment opportunities",
+          "Balancing mortgage vs. super contributions"
         ],
         "values": [
           "Innovation",
@@ -199,14 +227,19 @@
         ],
         "behavioural_traits": {
           "investment_experience": "Moderate; invests in stocks, cryptocurrencies, and tech startups",
-          "risk_tolerance": "High; embraces volatility for significant returns",
+          "risk_tolerance": "Moderately-High (core stability, satellite risk)",
           "information_sources": [
+            "Twitter/X",
+            "Reddit",
+            "Finance podcasts",
+            "AI stock screeners",
             "Financial news apps",
             "Investment forums (Reddit)",
             "Tech and finance podcasts",
             "Online investment communities"
           ],
           "preferred_channels": [
+            "Portfolio-tracker apps",
             "Mobile trading apps with advanced features",
             "Online platforms with real-time data",
             "Social media (Twitter, LinkedIn)"
@@ -252,8 +285,14 @@
           "decision_making": "Incorporates peer advice into analytical approach."
         },
         "content_consumption": {
-          "preferred_formats": ["In-depth articles", "Podcasts"],
-          "preferred_channels": ["Reddit", "LinkedIn"],
+          "preferred_formats": [
+            "In-depth articles",
+            "Podcasts"
+          ],
+          "preferred_channels": [
+            "Reddit",
+            "LinkedIn"
+          ],
           "additional_notes": "Engages with real-time data and analysis."
         }
       },
@@ -268,7 +307,8 @@
         "goals": [
           "Saving for a wedding and first home",
           "Building a robust investment portfolio",
-          "Achieving financial independence"
+          "Achieving financial independence",
+          "Balancing mortgage vs. super contributions"
         ],
         "values": [
           "Professional growth",
@@ -283,13 +323,18 @@
         ],
         "behavioural_traits": {
           "investment_experience": "Moderate; invests in ETFs and sustainable funds",
-          "risk_tolerance": "Moderate; balances risk with stable growth",
+          "risk_tolerance": "Moderate; balances risk with stable growth and higher family responsibilities",
           "information_sources": [
+            "LinkedIn",
+            "Women-in-Finance forums",
+            "Instagram",
+            "AI stock screeners",
             "Finance blogs and podcasts",
             "Online communities for women in finance",
             "Financial influencers on social media"
           ],
           "preferred_channels": [
+            "Portfolio-tracker apps",
             "Mobile apps for investment tracking",
             "Educational online platforms",
             "LinkedIn and Instagram"
@@ -334,14 +379,21 @@
           "decision_making": "Explores opportunities recommended by peers, integrating advice with planner's input."
         },
         "content_consumption": {
-          "preferred_formats": ["Podcasts", "Short articles", "App notifications"],
-          "preferred_channels": ["LinkedIn", "Instagram"],
+          "preferred_formats": [
+            "Podcasts",
+            "Short articles",
+            "App notifications"
+          ],
+          "preferred_channels": [
+            "LinkedIn",
+            "Instagram"
+          ],
           "additional_notes": "Values content accessible on the go."
         }
       }
     },
     {
-      "segment": "Established Accumulators (35–49 years)",
+      "segment": "Established Accumulators (35\u201349 years)",
       "male": {
         "name": "Mark Taylor",
         "age": 45,
@@ -369,11 +421,12 @@
         ],
         "behavioural_traits": {
           "investment_experience": "High experience; maintains a diversified portfolio including superannuation, property, stocks, and managed funds",
-          "risk_tolerance": "Moderate; seeks balance between growth and security",
+          "risk_tolerance": "Moderate; prefers core ETFs and occasionally dabbles in thematic funds",
           "information_sources": [
             "Financial advisors",
-            "Business and financial newspapers",
-            "Investment seminars and workshops"
+            "AFR",
+            "Investment seminars and workshops",
+            "Business and financial newspapers"
           ],
           "preferred_channels": [
             "Professional financial services with personalised advice",
@@ -385,7 +438,8 @@
           "Protecting assets during economic downturns",
           "Keeping up with regulatory changes",
           "Time constraints due to professional and family commitments",
-          "Ensuring retirement plans are on track"
+          "Ensuring retirement plans are on track",
+          "Keeping pace with market data without drowning in noise"
         ],
         "decision_making": "Consultative and risk-assessed; values expert opinions",
         "narrative": "Mark is a dedicated professional and family man focused on ensuring his family's financial well-being. He values stability and takes a measured approach to investing. Proactive in seeking advice, he appreciates services that respect his time and provide clear value. Balancing work, family, and financial planning is a constant challenge.",
@@ -417,8 +471,15 @@
           "decision_making": "Seeks peer opinions to validate strategies, especially for significant adjustments."
         },
         "content_consumption": {
-          "preferred_formats": ["Detailed reports", "Newsletters", "Webinars"],
-          "preferred_channels": ["Financial software", "Professional networks"],
+          "preferred_formats": [
+            "Detailed reports",
+            "Newsletters",
+            "Webinars"
+          ],
+          "preferred_channels": [
+            "Financial software",
+            "Professional networks"
+          ],
           "additional_notes": "Prefers comprehensive tools and automated summaries."
         }
       },
@@ -448,10 +509,11 @@
         ],
         "behavioural_traits": {
           "investment_experience": "High; actively manages a diversified portfolio including stocks, mutual funds, real estate, and retirement accounts",
-          "risk_tolerance": "Moderate; willing to take calculated risks for higher returns",
+          "risk_tolerance": "Moderate; prefers core ETFs and occasionally dabbles in thematic funds",
           "information_sources": [
-            "Financial journals",
             "Industry newsletters",
+            "Financial journals",
+            "Podcasts",
             "Financial advisors",
             "Professional women's networks"
           ],
@@ -465,7 +527,8 @@
           "Balancing career demands with family responsibilities",
           "Staying informed amidst a busy schedule",
           "Ensuring long-term security in a volatile economy",
-          "Addressing unique financial challenges faced by women"
+          "Addressing unique financial challenges faced by women",
+          "Keeping pace with market data without drowning in noise"
         ],
         "decision_making": "Strategic and efficiency-focused; values expert opinions",
         "narrative": "Sarah is a successful marketing director juggling a demanding career and a busy family life. Focused on growing her wealth to provide opportunities for her children and achieve early retirement, she is financially savvy but values expert advice to optimise strategies. She appreciates efficient, technology-driven solutions that fit into her hectic schedule.",
@@ -497,14 +560,21 @@
           "decision_making": "Relies on peer feedback to refine strategies and explore new opportunities."
         },
         "content_consumption": {
-          "preferred_formats": ["Brief reports", "Summaries", "Podcasts"],
-          "preferred_channels": ["Mobile apps", "Webinars"],
+          "preferred_formats": [
+            "Brief reports",
+            "Summaries",
+            "Podcasts"
+          ],
+          "preferred_channels": [
+            "Mobile apps",
+            "Webinars"
+          ],
           "additional_notes": "Values content that fits into her busy schedule."
         }
       }
     },
     {
-      "segment": "Pre-Retirees (50–64 years)",
+      "segment": "Pre-Retirees (50\u201364 years)",
       "male": {
         "name": "David Lee",
         "age": 58,
@@ -532,7 +602,7 @@
         ],
         "behavioural_traits": {
           "investment_experience": "Extensive; actively manages a diversified portfolio",
-          "risk_tolerance": "Low to moderate; focuses on wealth preservation and income generation",
+          "risk_tolerance": "Low-to-Moderate; capital-protection focus",
           "information_sources": [
             "Financial advisors",
             "Financial newspapers and investment reports",
@@ -548,7 +618,8 @@
           "Market volatility eroding savings",
           "Impact of inflation on retirement income",
           "Ensuring funds last throughout retirement",
-          "Navigating complex tax regulations"
+          "Navigating complex tax regulations",
+          "Unsure if current nest egg will last throughout retirement"
         ],
         "decision_making": "Cautious and methodical; seeks multiple professional opinions",
         "narrative": "David is a seasoned professional approaching retirement, focusing on securing his financial future and that of his family. Meticulous in planning, he values trusted expert guidance. Prefers conservative investments offering stability and predictable income, and is interested in philanthropy and responsible wealth management.",
@@ -580,8 +651,14 @@
           "decision_making": "Balances peer recommendations with expert guidance."
         },
         "content_consumption": {
-          "preferred_formats": ["Detailed reports", "Analyses"],
-          "preferred_channels": ["Financial publications", "Seminars"],
+          "preferred_formats": [
+            "Detailed reports",
+            "Analyses"
+          ],
+          "preferred_channels": [
+            "Financial publications",
+            "Seminars"
+          ],
           "additional_notes": "Values face-to-face consultations."
         }
       },
@@ -611,7 +688,7 @@
         ],
         "behavioural_traits": {
           "investment_experience": "Extensive; manages a substantial portfolio",
-          "risk_tolerance": "Low to moderate; prioritises wealth preservation",
+          "risk_tolerance": "Low-to-Moderate; capital-protection focus",
           "information_sources": [
             "Financial advisors",
             "Financial publications",
@@ -628,7 +705,8 @@
           "Market volatility affecting retirement funds",
           "Understanding complex financial products",
           "Ensuring savings last throughout retirement",
-          "Managing healthcare costs"
+          "Managing healthcare costs",
+          "Unsure if current nest egg will last throughout retirement"
         ],
         "decision_making": "Independent and informed; values data-driven insights",
         "narrative": "Catherine is a seasoned financial professional looking forward to retiring and embracing new adventures. With her children grown, she focuses on her own goals. Meticulous about finances, she seeks to solidify retirement plans and values expert guidance to navigate complexities.",
@@ -660,8 +738,14 @@
           "decision_making": "Incorporates peer insights into wealth management approach."
         },
         "content_consumption": {
-          "preferred_formats": ["In-depth reports", "Analytical tools"],
-          "preferred_channels": ["Exclusive seminars", "Professional networks"],
+          "preferred_formats": [
+            "In-depth reports",
+            "Analytical tools"
+          ],
+          "preferred_channels": [
+            "Exclusive seminars",
+            "Professional networks"
+          ],
           "additional_notes": "Prefers personalised advisory content."
         }
       }
@@ -694,7 +778,7 @@
         ],
         "behavioural_traits": {
           "investment_experience": "High; managed investments for decades",
-          "risk_tolerance": "Low; prioritises capital preservation",
+          "risk_tolerance": "Low; prioritises capital preservation, with term-deposit yields now more attractive",
           "information_sources": [
             "Financial newspapers",
             "Financial advisor",
@@ -712,7 +796,7 @@
           "Protecting investments from inflation"
         ],
         "decision_making": "Pragmatic and family-influenced; trusts long-standing relationships",
-        "narrative": "Robert is enjoying retirement, focusing on family and hobbies. Prefers simple, reliable investments and values his relationship with his advisor. Cautious about protecting wealth to support his lifestyle and family's future.",
+        "narrative": "Robert is enjoying retirement, focusing on family and hobbies. Prefers simple, reliable investments and values his relationship with his advisor. Cautious about protecting wealth to support his lifestyle and family's future. Recent rate rises have made term\u2011deposit yields particularly attractive for additional income.",
         "image": "https://www.fool.com.au/wp-content/uploads/2024/11/robert_persona.png",
         "suggestions": [
           "What financial services brand first comes to mind when you think of investing?",
@@ -737,8 +821,14 @@
           "decision_making": "Relies on own experience and advisor's advice."
         },
         "content_consumption": {
-          "preferred_formats": ["Printed materials", "Newsletters"],
-          "preferred_channels": ["Face-to-face meetings", "Mail"],
+          "preferred_formats": [
+            "Printed materials",
+            "Newsletters"
+          ],
+          "preferred_channels": [
+            "Face-to-face meetings",
+            "Mail"
+          ],
           "additional_notes": "Values straightforward materials and trusted recommendations."
         }
       },
@@ -768,7 +858,7 @@
         ],
         "behavioural_traits": {
           "investment_experience": "Moderate; prefers low-risk investments",
-          "risk_tolerance": "Low; focuses on capital preservation",
+          "risk_tolerance": "Low; prioritises capital preservation, with term-deposit yields now more attractive",
           "information_sources": [
             "Financial advisor",
             "Lifestyle magazines",
@@ -786,7 +876,7 @@
           "Understanding changes in policies affecting retirees"
         ],
         "decision_making": "Trust-based and advice-seeking; avoids complex products",
-        "narrative": "Margaret enjoys retirement, spending time with grandchildren and contributing to the community. Financial security is essential for peace of mind. Prefers low-risk investments providing steady income, values personal relationship with advisor.",
+        "narrative": "Margaret enjoys retirement, spending time with grandchildren and contributing to the community. Financial security is essential for peace of mind. Prefers low-risk investments providing steady income, values personal relationship with advisor. Recent rate rises have made term\u2011deposit yields particularly attractive for additional income.",
         "image": "https://www.fool.com.au/wp-content/uploads/2024/11/margaret_persona.png",
         "suggestions": [
           "What features make you feel secure about using financial services?",
@@ -811,8 +901,13 @@
           "decision_making": "Uses peer advice to explore reliable investment options."
         },
         "content_consumption": {
-          "preferred_formats": ["Simple written materials"],
-          "preferred_channels": ["Face-to-face meetings", "Radio"],
+          "preferred_formats": [
+            "Simple written materials"
+          ],
+          "preferred_channels": [
+            "Face-to-face meetings",
+            "Radio"
+          ],
           "additional_notes": "Prefers content without technical jargon."
         }
       }
