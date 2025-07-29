@@ -12,23 +12,41 @@ if "question_input" not in st.session_state:
     st.session_state.question_input = ""
 
 # ────────────────────────────────────────────────────────────────────────────────
-# Load data & model client
+# Load personas & patch missing Stake‑fields
 # ────────────────────────────────────────────────────────────────────────────────
 with open("personas.json", "r", encoding="utf-8") as f:
     persona_data = json.load(f)["personas"]
 
+def _patch(p: dict) -> dict:
+    """Ensure every persona has the Stake‑driven keys."""
+    p.setdefault("future_confidence", 3)               # 1‑5 scale
+    p.setdefault("family_support_received", False)     # bool
+    p.setdefault("ideal_salary_for_comfort", 120_000)  # int
+    p.setdefault("budget_adjustments_6m", [])          # list[str]
+    p.setdefault("super_engagement", "Unknown")        # str
+    p.setdefault("property_via_super_interest", "No")  # Yes | No | Maybe
+    return p
+
+for group in persona_data:
+    for gender in ("male", "female"):
+        if gender in group:
+            group[gender] = _patch(group[gender])
+
+# ────────────────────────────────────────────────────────────────────────────────
+# OpenAI client
+# ────────────────────────────────────────────────────────────────────────────────
 client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 
 segment_summaries = {
-    "Next Generation Investors (18–24 years)": "These young investors are tech‑savvy, socially conscious, and ambitious…",
-    "Emerging Wealth Builders (25–34 years)": "These individuals are in the early stages of wealth accumulation…",
-    "Established Accumulators (35–49 years)": "Often juggling career and family, these investors focus on financial security…",
-    "Pre‑Retirees (50–64 years)": "Pre‑retirees are focused on preserving wealth, planning for a secure retirement…",
-    "Retirees (65+ years)": "This segment prioritises stability, simplicity, and preserving capital…",
+    "Next Generation Investors (18–24 years)": "Tech‑native, socially‑conscious starters focused on building asset bases early.",
+    "Emerging Wealth Builders (25–34 years)": "Balancing house deposits, careers and investing; optimistic but wage‑squeezed.",
+    "Established Accumulators (35–49 years)": "Juggling family, mortgages and wealth growth; value efficiency and advice.",
+    "Pre‑Retirees (50–64 years)": "Capital‑preservers planning retirement income; keen super watchers.",
+    "Retirees (65+ years)": "Stability‑seekers prioritising income and low volatility.",
 }
 
 # ────────────────────────────────────────────────────────────────────────────────
-# Streamlit UI setup
+# Streamlit UI
 # ────────────────────────────────────────────────────────────────────────────────
 st.set_page_config(page_title="Burgo's Persona Portal", layout="centered", page_icon="💬")
 
@@ -43,11 +61,9 @@ st.markdown(
     """
     <div style="background:#f0f2f6;padding:20px;border-left:6px solid #485cc7;border-radius:10px;margin-bottom:25px">
         <h4 style="margin-top:0">ℹ️ About This Tool</h4>
-    <p>This tool uses AI-generated investor personas — built from real Australian investor research — to simulate how different segments might respond to your ideas.</p>
-    <p>Each persona is built on rich attributes — including goals, values, behaviours, concerns, and communication preferences — informed by real investor research such as the ASX Investor Study, Investment Trends reports, Stake member surveys, and more.</p>
-    <p>GPT-4o is then used to emulate how these personas might realistically think, feel, and respond, based on their individual attributes.</p>
-    <p>The goal? To give marketing and product teams a quick, easy way to test ideas and spark fresh thinking — without needing to run full-scale research.</p>
-    <p>Of course, there are limitations. AI personas obviously aren’t real people. But they’re grounded in data, and designed to (hopefully) help inspire new ideas.</p>    </div>""",
+        <p>This tool uses AI‑generated investor personas — built from real Australian investor research such as Stake’s 2024 Ambition Report — to simulate how different segments might respond to your ideas.</p>
+    </div>
+    """,
     unsafe_allow_html=True,
 )
 
@@ -109,6 +125,11 @@ if "selected_persona" in st.session_state:
             <p><strong>Occupation:</strong> {persona.get('occupation')}</p>
             <p><strong>Income:</strong> ${persona.get('income'):,}</p>
             <p><strong>Risk Tolerance:</strong> {persona.get('behavioural_traits', {}).get('risk_tolerance')}</p>
+            <p><strong>Confidence score:</strong> {persona.get('future_confidence')}/5</p>
+            <p><strong>Super engagement:</strong> {persona.get('super_engagement')}</p>
+            <p><strong>Would tap super for property?</strong> {persona.get('property_via_super_interest')}</p>
+            <p><strong>Ideal ‘comfortable’ salary:</strong> ${persona.get('ideal_salary_for_comfort'):,}</p>
+            <p><strong>Recent budget cut‑backs:</strong><br>{''.join('• '+c+'<br>' for c in persona.get('budget_adjustments_6m'))}</p>
             <p><strong>Goals:</strong><br>{''.join('• '+g+'<br>' for g in persona.get('goals', []))}</p>
             <p><strong>Values:</strong> {', '.join(persona.get('values', []))}</p>
         </div>""",
@@ -126,9 +147,7 @@ if "selected_persona" in st.session_state:
 # ────────────────────────────────────────────────────────────────────────────────
 # Helper: build ChatCompletion messages with memory
 # ────────────────────────────────────────────────────────────────────────────────
-
-def build_messages(persona_intro: str, history: list[tuple[str, str]], new_q: str):
-    """Convert prior Q&A into role‑alternating messages (max last 4 turns)."""
+def _build_messages(persona_intro: str, history: list[tuple[str, str]], new_q: str):
     msgs = [
         {"role": "system", "content": "You are simulating an investor responding in a realistic, conversational tone."},
         {"role": "user", "content": persona_intro},
@@ -141,28 +160,27 @@ def build_messages(persona_intro: str, history: list[tuple[str, str]], new_q: st
     msgs.append({"role": "user", "content": new_q})
     return msgs
 
-# Cached LLM call --------------------------------------------------------------
 @st.cache_data(show_spinner=False)
 def _ask_llm(messages: list):
     reply = client.chat.completions.create(model="o3", messages=messages)
     return reply.choices[0].message.content.strip()
 
-# Ask‑persona wrapper -----------------------------------------------------------
-
 def ask_persona(persona: dict, question: str):
     name = persona["name"]
     intro = (
         f"You are {name}, a {persona['age']}-year‑old {persona['occupation']} from {persona['location']}. "
-        f"Your values: {', '.join(persona['values'])}. Respond as this individual." )
+        f"Your values: {', '.join(persona['values'])}. "
+        f"Your confidence about the future is {persona['future_confidence']}/5 and you check super {persona['super_engagement'].lower()}. "
+        "Respond as this individual."
+    )
     hist = st.session_state.chat_history.get(name, [])
-    answer = _ask_llm(build_messages(intro, hist, question))
+    answer = _ask_llm(_build_messages(intro, hist, question))
     st.session_state.chat_history.setdefault(name, []).append((question, answer))
     return answer
 
 # ────────────────────────────────────────────────────────────────────────────────
 # Q&A Section
 # ────────────────────────────────────────────────────────────────────────────────
-
 st.markdown("---")
 st.markdown("## 💬 Ask a Question")
 question = st.text_area("Enter your question:", value=st.session_state.get("question_input", ""))
@@ -176,19 +194,18 @@ if st.button("Ask GPT"):
             try:
                 if ask_all:
                     for ent in filtered_personas:
-                        reply = ask_persona(ent["persona"], question)
+                        ask_persona(ent["persona"], question)
                 else:
                     if "selected_persona" not in st.session_state:
                         st.warning("Please select a persona.")
                         st.stop()
-                    reply = ask_persona(st.session_state.selected_persona, question)
+                    ask_persona(st.session_state.selected_persona, question)
             except Exception as e:
                 st.error(f"Error: {e}")
 
 # ────────────────────────────────────────────────────────────────────────────────
 # Conversation history display
 # ────────────────────────────────────────────────────────────────────────────────
-
 if st.session_state.chat_history:
     st.markdown("---")
     st.markdown("### 🗂️ Conversation History")
