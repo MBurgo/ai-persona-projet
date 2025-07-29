@@ -1,8 +1,7 @@
-
 {
   "personas": [
     {
-      "segment": "Next Generation Investors (18\u201324 years)",
+      "segment": "Next Generation Investors (18–24 years)",
       "male": {
         "name": "Alex Johnson",
         "age": 22,
@@ -97,7 +96,17 @@
             "Instagram"
           ],
           "additional_notes": "Enjoys interactive content like quizzes and challenges."
-        }
+        },
+        "future_confidence": 4,
+        "family_support_received": false,
+        "ideal_salary_for_comfort": 110000,
+        "budget_adjustments_6m": [
+          "Take‑away food",
+          "Cafés & restaurants",
+          "Travel"
+        ],
+        "super_engagement": "Rarely",
+        "property_via_super_interest": "No"
       },
       "female": {
         "name": "Mia Nguyen",
@@ -157,7 +166,7 @@
           "decision_making_process": "Prefers thorough research before decisions. Values trusted community recommendations.",
           "financial_behaviour": "Uses budgeting apps. Interested in investing but hesitant due to lack of knowledge."
         },
-        "risk_tolerance_differences": "Lower than older cohorts; experiments with high\u2011risk assets but only with small stake sizes.",
+        "risk_tolerance_differences": "Lower than older cohorts; experiments with high‑risk assets but only with small stake sizes.",
         "scenarios": {
           "market_volatility": "Feels anxious but refrains from selling. Attends webinars to understand risk mitigation and invests in stable, low-risk options.",
           "economic_downturn": "Reduces high-risk investments, focuses on building an emergency fund, and develops a stable investment strategy with advisors.",
@@ -188,11 +197,21 @@
             "YouTube"
           ],
           "additional_notes": "Values community discussions on Facebook groups."
-        }
+        },
+        "future_confidence": 4,
+        "family_support_received": false,
+        "ideal_salary_for_comfort": 110000,
+        "budget_adjustments_6m": [
+          "Take‑away food",
+          "Cafés & restaurants",
+          "Travel"
+        ],
+        "super_engagement": "Rarely",
+        "property_via_super_interest": "No"
       }
     },
     {
-      "segment": "Emerging Wealth Builders (25\u201334 years)",
+      "segment": "Emerging Wealth Builders (25–34 years)",
       "male": {
         "name": "Liam Anderson",
         "age": 30,
@@ -287,7 +306,17 @@
             "LinkedIn"
           ],
           "additional_notes": "Engages with real-time data and analysis."
-        }
+        },
+        "future_confidence": 4,
+        "family_support_received": false,
+        "ideal_salary_for_comfort": 130000,
+        "budget_adjustments_6m": [
+          "Take‑away food",
+          "Cafés & restaurants",
+          "Travel"
+        ],
+        "super_engagement": "Quarterly",
+        "property_via_super_interest": "Maybe"
       },
       "female": {
         "name": "Emily Chen",
@@ -382,11 +411,21 @@
             "Instagram"
           ],
           "additional_notes": "Values content accessible on the go."
-        }
+        },
+        "future_confidence": 4,
+        "family_support_received": false,
+        "ideal_salary_for_comfort": 130000,
+        "budget_adjustments_6m": [
+          "Take‑away food",
+          "Cafés & restaurants",
+          "Travel"
+        ],
+        "super_engagement": "Quarterly",
+        "property_via_super_interest": "Maybe"
       }
     },
     {
-      "segment": "Established Accumulators (35\u201349 years)",
+      "segment": "Established Accumulators (35–49 years)",
       "male": {
         "name": "Mark Taylor",
         "age": 45,
@@ -474,7 +513,17 @@
             "Professional networks"
           ],
           "additional_notes": "Prefers comprehensive tools and automated summaries."
-        }
+        },
+        "future_confidence": 4,
+        "family_support_received": false,
+        "ideal_salary_for_comfort": 150000,
+        "budget_adjustments_6m": [
+          "Take‑away food",
+          "Cafés & restaurants",
+          "Travel"
+        ],
+        "super_engagement": "Monthly",
+        "property_via_super_interest": "Maybe"
       },
       "female": {
         "name": "Sarah Williams",
@@ -561,11 +610,21 @@
             "Webinars"
           ],
           "additional_notes": "Values content that fits into her busy schedule."
-        }
+        },
+        "future_confidence": 4,
+        "family_support_received": false,
+        "ideal_salary_for_comfort": 150000,
+        "budget_adjustments_6m": [
+          "Take‑away food",
+          "Cafés & restaurants",
+          "Travel"
+        ],
+        "super_engagement": "Monthly",
+        "property_via_super_interest": "Maybe"
       }
     },
     {
-      "segment": "Pre-Retirees (50\u201364 years)",
+      "segment": "Pre-Retirees (50–64 years)",
       "male": {
         "name": "David Lee",
         "age": 58,
@@ -651,7 +710,17 @@
             "Seminars"
           ],
           "additional_notes": "Values face-to-face consultations."
-        }
+        },
+        "future_confidence": 3,
+        "family_support_received": false,
+        "ideal_salary_for_comfort": 140000,
+        "budget_adjustments_6m": [
+          "Take‑away food",
+          "Cafés & restaurants",
+          "Travel"
+        ],
+        "super_engagement": "Monthly",
+        "property_via_super_interest": "Maybe"
       },
       "female": {
         "name": "Catherine O'Neill",
@@ -738,7 +807,17 @@
             "Professional networks"
           ],
           "additional_notes": "Prefers personalised advisory content."
-        }
+        },
+        "future_confidence": 3,
+        "family_support_received": false,
+        "ideal_salary_for_comfort": 140000,
+        "budget_adjustments_6m": [
+          "Take‑away food",
+          "Cafés & restaurants",
+          "Travel"
+        ],
+        "super_engagement": "Monthly",
+        "property_via_super_interest": "Maybe"
       }
     },
     {
@@ -787,7 +866,7 @@
           "Protecting investments from inflation"
         ],
         "decision_making": "Pragmatic and family-influenced; trusts long-standing relationships",
-        "narrative": "Robert is enjoying retirement, focusing on family and hobbies. Prefers simple, reliable investments and values his relationship with his advisor. Cautious about protecting wealth to support his lifestyle and family's future. Recent rate rises have made term\u2011deposit yields particularly attractive for additional income.",
+        "narrative": "Robert is enjoying retirement, focusing on family and hobbies. Prefers simple, reliable investments and values his relationship with his advisor. Cautious about protecting wealth to support his lifestyle and family's future. Recent rate rises have made term‑deposit yields particularly attractive for additional income.",
         "image": "https://www.fool.com.au/wp-content/uploads/2024/11/robert_persona.png",
         "suggestions": [
           "What financial services brand first comes to mind when you think of investing?",
@@ -821,7 +900,17 @@
             "Mail"
           ],
           "additional_notes": "Values straightforward materials and trusted recommendations."
-        }
+        },
+        "future_confidence": 3,
+        "family_support_received": false,
+        "ideal_salary_for_comfort": 120000,
+        "budget_adjustments_6m": [
+          "Take‑away food",
+          "Cafés & restaurants",
+          "Travel"
+        ],
+        "super_engagement": "Quarterly",
+        "property_via_super_interest": "No"
       },
       "female": {
         "name": "Margaret Thompson",
@@ -867,7 +956,7 @@
           "Understanding changes in policies affecting retirees"
         ],
         "decision_making": "Trust-based and advice-seeking; avoids complex products",
-        "narrative": "Margaret enjoys retirement, spending time with grandchildren and contributing to the community. Financial security is essential for peace of mind. Prefers low-risk investments providing steady income, values personal relationship with advisor. Recent rate rises have made term\u2011deposit yields particularly attractive for additional income.",
+        "narrative": "Margaret enjoys retirement, spending time with grandchildren and contributing to the community. Financial security is essential for peace of mind. Prefers low-risk investments providing steady income, values personal relationship with advisor. Recent rate rises have made term‑deposit yields particularly attractive for additional income.",
         "image": "https://www.fool.com.au/wp-content/uploads/2024/11/margaret_persona.png",
         "suggestions": [
           "What features make you feel secure about using financial services?",
@@ -900,7 +989,17 @@
             "Radio"
           ],
           "additional_notes": "Prefers content without technical jargon."
-        }
+        },
+        "future_confidence": 3,
+        "family_support_received": false,
+        "ideal_salary_for_comfort": 120000,
+        "budget_adjustments_6m": [
+          "Take‑away food",
+          "Cafés & restaurants",
+          "Travel"
+        ],
+        "super_engagement": "Quarterly",
+        "property_via_super_interest": "No"
       }
     }
   ]
