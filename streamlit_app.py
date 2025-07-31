@@ -61,7 +61,7 @@ st.markdown(
     """
     <div style="background:#f0f2f6;padding:20px;border-left:6px solid #485cc7;border-radius:10px;margin-bottom:25px">
         <h4 style="margin-top:0">ℹ️ About This Tool</h4>
-        <p>This tool uses AI‑generated investor personas — built from real Australian investor research such as the ASX's Investor Study, Investment Trends Investing Landscape and Stake’s 2024 Ambition Report — to simulate how different segments might respond to your ideas.</p>
+        <p>This tool uses AI‑generated investor personas — built from real Australian investor research such as the ASX's "Investor Study", Investment Trends' "Australian Online Investor" study, and Stake’s 2024 "Ambition Report" — to simulate how different segments might respond to your ideas.</p>
     </div>
     """,
     unsafe_allow_html=True,
